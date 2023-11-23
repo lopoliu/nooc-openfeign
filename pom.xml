@@ -11,6 +11,12 @@
     <modules>
         <module>user-service</module>
         <module>order-service</module>
+        <module>user-service/user-domain</module>
+        <module>user-service/user-api</module>
+        <module>user-service/user-business</module>
+        <module>order-service/order-business</module>
+        <module>order-service/order-domain</module>
+        <module>order-service/order-api</module>
     </modules>
 
     <properties>

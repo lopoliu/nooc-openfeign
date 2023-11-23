@@ -19,7 +19,7 @@
     <artifactId>spring-cloud-starter-loadbalancer</artifactId>
 </dependency>
 ```
-配置client
+定义服务调用的接口
 ```java
 @FeignClient(value = "userService")
 public interface UserClient {
@@ -53,4 +53,19 @@ public class OrderServiceImpl implements OrderService {
         return order;
     }
 }
+```
+
+使用代理池处理http请求，导入依赖
+```xml
+<dependency>
+    <groupId>io.github.openfeign</groupId>
+    <artifactId>feign-httpclient</artifactId>
+</dependency>
+```
+
+配置openfeign代理池为apache httpclient
+```yaml
+feign:
+  httpclient:
+    enabled: true
 ```
